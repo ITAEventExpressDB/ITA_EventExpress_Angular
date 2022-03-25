@@ -1,0 +1,54 @@
+.header {
+    background: rgb(20, 1, 1);
+    height: 60px;
+    width: 100%;
+    text-align: center;
+    z-index: 50;
+    position: sticky;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px 5px;
+    }
+  
+  .header__menu {
+    width: 54px;
+    height: 47px;
+    margin: 12px, 0px, 0px, 8px;
+    cursor: pointer;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0%);
+      font-size: 24px;
+    
+      &:active,
+      &:focus,
+      &:hover {
+        text-decoration: none;
+      }
+    
+      &__textEvents {
+        color: violet;
+        text-shadow: 0 0 3px gray, 0 0 2px white;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    
+      &__textExpress {
+        color: white;
+        text-shadow: 0 0 3px gray , 0 0 5px violet;
+        font-size: 24px;
+        font-weight: bold;
+      }
+    
+      &__image {
+        height: 25px;
+      }
+    }
+   
