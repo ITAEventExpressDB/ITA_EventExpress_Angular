@@ -1,1 +1,23 @@
-<p>about-us works!</p>
+<div class="container about__container">
+	<div class="about__info">
+	  <h1 class="about__header">About us </h1>
+	  <div class="about__info_text">
+		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+		et dolore magna aliqua. Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip 
+		ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+		fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt inculpa qui officia deserunt 
+		mollit anim id est laborum.
+	 </div>
+	  	<button
+			class="about__info__button"
+			type="button"
+		>
+			Join us
+		</button>
+	</div>
+	<div class="about__photos">
+          <div *ngFor="let i of mapper" class="about__photos_item">
+            <img [src]="i.img" />
+            <div class="about__photos_text">{{i.text}}</div>
+          </div>
+      </div>
