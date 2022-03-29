@@ -1,0 +1,25 @@
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 0;
+}
+
+.page__input {
+  height: 15px;
+  margin: 0 15px;
+  padding-left: 5px;
+}
+
+.page__button {
+  height: 20px;
+  width: 70px;
+  background: none;
+  border: 1px solid grey;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.page__button:hover {
+  cursor: pointer;
+}
