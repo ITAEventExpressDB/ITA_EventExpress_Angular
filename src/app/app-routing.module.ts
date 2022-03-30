@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AboutUsComponent } from './about-us/about-us.component';
 
 const routes: Routes = [
-	{ path: 'aboutUs', component: AboutUsComponent },
+	{ path: 'about', component: AboutUsComponent },
   ];
 
 @NgModule({
