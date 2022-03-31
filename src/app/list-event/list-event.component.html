@@ -1,0 +1,17 @@
+<div class="container">
+    <div *ngFor="let event of mapper" class="card__item">
+      <div class="card__item_photo">
+        <img [src]="event.eventImagePath" alt="Event photo" />
+      </div>
+        <section class="card__item_content">
+          <h2 class="card__item_header">{{event.title}}</h2>
+          <p class="card__item_description">
+           {{event.description.slice(0, 200)}}...
+          </p>
+          <div class="card__item_bottom-row">
+            <span class="card__item_footer">{{event.location}}</span>
+            <span class="card__item_footer">{{event.date}}</span>
+          </div>
+        </section>
+    </div>
+</div>
