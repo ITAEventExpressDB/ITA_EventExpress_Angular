@@ -1,1 +1,7 @@
-<p>users-form works!</p>
+<div class="container">
+	<ul class="user__list">
+		<li *ngFor="let user of users" class="user__list_item">
+			name: {{user.name}}, email: {{user.email}}, phone: {{user.phone}}
+		</li>
+	</ul>
+</div>
