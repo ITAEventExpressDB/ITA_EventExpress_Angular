@@ -1,8 +1,33 @@
 @import "../../styles/variables";
 .user__list{
 	text-align: center;
+	margin-bottom: 30px;
 }
 
 .user__list_item {
 	margin-top: 10px;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	padding: 10px;
+	border-radius: 15px;
+	border: 2px solid rgb(127, 127, 127);
+	background-color: #eae8e8;
+
+	input {
+		padding: 5px;
+		border-radius: 5px;
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+}
+
+.form__submit {
+	align-self: center;
+	padding: 5px 10px;
+	border-radius: 5px;
+	cursor: pointer;
+	background-color: $white;
 }

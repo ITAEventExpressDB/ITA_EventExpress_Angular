@@ -5,10 +5,14 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UsersService {
-  url="http://localhost:3000/api/users/"
+  url="http://localhost:3000/api/users"
   constructor(private http:HttpClient) { }
 
   getData() {
 	return this.http.get(this.url);
+  }
+
+  addUser(data:any) {
+	return this.http.post(this.url + '/AddUser', data)
   }
 }

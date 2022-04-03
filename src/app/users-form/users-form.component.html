@@ -4,4 +4,15 @@
 			name: {{user.name}}, email: {{user.email}}, phone: {{user.phone}}
 		</li>
 	</ul>
+	<form class="form" #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)">
+		<input type="text" ngModel name="name" placeholder="Enter name"/>
+		<input type="text" ngModel name="email" placeholder="Enter email"/>
+		<input type="text" ngModel name="phone" placeholder="Enter phone"/>
+		<input type="date" ngModel name="birthday" placeholder="Enter birthday date"/>
+		<select ngModel name="gender">
+			<option value=1>G</option>
+			<option value=0>M</option>
+		</select>
+		<button class="form__submit">Add new user</button>
+	</form>
 </div>
