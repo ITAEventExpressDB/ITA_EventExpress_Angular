@@ -7,12 +7,14 @@ import { HeaderComponent } from './header/header.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ListEventComponent } from './list-event/list-event.component';
+import { UsersFormComponent } from './users-form/users-form.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AboutUsComponent,
-    ListEventComponent
+    ListEventComponent,
+    UsersFormComponent
   ],
   imports: [
     BrowserModule,
