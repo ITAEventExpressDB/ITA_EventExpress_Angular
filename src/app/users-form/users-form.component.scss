@@ -30,4 +30,14 @@
 	border-radius: 5px;
 	cursor: pointer;
 	background-color: $white;
+	margin-top: 10px;
+}
+
+.input__container {
+	display: flex;
+	flex-direction: column;
+}
+
+.list__button {
+	margin-left: 5px;
 }
