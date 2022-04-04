@@ -35,8 +35,7 @@ export class UnitOfMeasuringsFormComponent implements OnInit {
     };
   }
 
-  startEdit(event: MouseEvent) {
-    const { id } = event.target as HTMLTextAreaElement;
+  startEdit(id: string) {
     this.editing = { val: true, title: 'Edit', id };
     for (const unit of this.units) {
       if (unit.id === +id) {
@@ -47,24 +46,23 @@ export class UnitOfMeasuringsFormComponent implements OnInit {
   }
 
   getUnits() {
-    this.service.getData(this.router, 'All').subscribe((data) => {
+    this.service.getUnits().subscribe((data) => {
       this.units = data;
     });
   }
 
   getUnitFormData(data: any) {
     (this.editing.val
-      ? this.service.editUnit(this.router, 'Edit', this.editing.id, data)
-      : this.service.addUser(this.router, 'Create', data)
+      ? this.service.editUnit(this.editing.id, data)
+      : this.service.createUnit(data)
     ).subscribe(() => {
       this.getUnits();
       this.cancel();
     });
   }
 
-  deleteUnit(event: MouseEvent) {
-    const { id } = event.target as HTMLTextAreaElement;
-    this.service.deleteElement(this.router, 'Delete', id).subscribe(() => {
+  deleteUnit(id: string) {
+    this.service.deleteUnit(id).subscribe(() => {
       this.getUnits();
     });
   }

@@ -9,19 +9,19 @@ export class UnitOfMeasuringsFormService {
 
   constructor(private http: HttpClient) {}
 
-  getData() {
-    return this.http.get(`${this.url}`);
+  getUnits() {
+    return this.http.get(`${this.url}/All`);
   }
 
-  addUser(data: any) {
-    return this.http.post(`${this.url}/AddUser`, data);
+  createUnit(data: any) {
+    return this.http.post(`${this.url}/Create`, data);
   }
 
-  editUser(id: string, data: any) {
-    return this.http.patch(`${this.url}/EditUsername/${id}`, data);
+  editUnit(id: string, data: any) {
+    return this.http.patch(`${this.url}/Edit/${id}`, data);
   }
 
-  deleteUser(id: string) {
-    return this.http.delete(`${this.url}/DeleteUser/${id}`);
+  deleteUnit(id: string) {
+    return this.http.delete(`${this.url}/Delete/${id}`);
   }
 }
