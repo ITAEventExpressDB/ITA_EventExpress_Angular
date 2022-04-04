@@ -1,0 +1,25 @@
+<div class="container">
+	<div class="unit">
+		<ul *ngFor="let unit of units" class="unit__list">
+			<li class="unit__list_item">Unit name: {{unit.unitName}}</li>
+			<li class="unit__list_item">Short name: {{unit.shortName}}</li>
+			<li class="unit__list_item">Category id: {{unit.categoryId}}</li>
+			<li class="unit__list_item">Is deleted: {{unit.isDeleted}}</li>
+			<div class="unit__list__settings">
+				<button [id]="unit.id" class="settings_btn btn-light-theme" (click)="startEdit($event)">Edit</button>
+				<button [id]="unit.id" class="settings_btn btn-light-theme" (click)="deleteUnit($event)">Delete</button>
+			</div>
+		</ul>
+	</div>
+	<form class="form" #usersForm="ngForm" (ngSubmit)="getUnitFormData(usersForm.value)">
+		<input type="text" ngModel name="unitName" placeholder="Enter unit name" [(ngModel)]="unitInfo.unitName"/>
+		<input type="text" ngModel name="shortName" placeholder="Enter short name"[(ngModel)]="unitInfo.shortName"/>
+		<input type="number" ngModel name="categoryId" placeholder="Enter category id" [(ngModel)]="unitInfo.categoryId"/>
+		<select ngModel name="isDeleted" [(ngModel)]='unitInfo.isDeleted'>
+			<option value=0>False</option>
+			<option value=1>True</option>
+		</select>
+		<button class="form__submit btn-light-theme">{{editing.title}} new unit of measurings</button>
+		<button  *ngIf="editing.val" class="form__edit_cancel btn-light-theme" (click)="cancel()">Cancel</button>
+	</form>
+</div>
