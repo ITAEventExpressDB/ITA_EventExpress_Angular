@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class UsersService {
-  url = 'http://localhost:3000/api/users';
+export class UnitOfMeasuringsFormService {
+  url = 'http://localhost:3000/api/UnitOfMeasuring';
 
   constructor(private http: HttpClient) {}
 

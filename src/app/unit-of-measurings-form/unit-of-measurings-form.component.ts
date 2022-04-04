@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from '../services/users.service';
+import { UnitOfMeasuringsFormService } from '../services/unit-of-measurings-form.service';
 
 @Component({
   selector: 'app-unit-of-measurings-form',
@@ -21,7 +21,7 @@ export class UnitOfMeasuringsFormComponent implements OnInit {
     isDeleted: null,
   };
 
-  constructor(private service: UsersService) {
+  constructor(private service: UnitOfMeasuringsFormService) {
     this.getUnits();
   }
 

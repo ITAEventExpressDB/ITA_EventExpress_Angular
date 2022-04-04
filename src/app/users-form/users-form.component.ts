@@ -21,15 +21,15 @@ export class UsersFormComponent implements OnInit {
   }
 
   getUsers() {
-    this.user.getData(this.router, '').subscribe((data) => {
+    this.user.getData().subscribe((data) => {
       this.users = data;
     });
   }
 
   getUserFormData(data: any) {
     (this.editing.val
-      ? this.user.editUnit(this.router, 'EditUsername', this.editing.id, data)
-      : this.user.addUser(this.router, 'AddUser', data)
+      ? this.user.editUser(this.editing.id, data)
+      : this.user.addUser(data)
     ).subscribe(() => {
       this.getUsers();
       this.cancel();
@@ -37,7 +37,7 @@ export class UsersFormComponent implements OnInit {
   }
 
   deleteUser(id: string) {
-    this.user.deleteElement(this.router, 'DeleteUser', id).subscribe(() => {
+    this.user.deleteUser(id).subscribe(() => {
       this.getUsers();
     });
   }
