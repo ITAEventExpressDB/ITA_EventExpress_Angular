@@ -29,16 +29,14 @@ body {
 }
   
 .btn-dark-theme {
-	display: flex;
-	justify-content: flex-end;   
 	border-radius: $buttonBorderRadius;
 	font-weight: bold;
-	align-self: flex-end;
 	transition: 0.5s all;
 	cursor: pointer;
  	border: 2px solid $white;
 	color: $white;
-
+	padding: 5px;
+	
 	&:hover{
 		color: darken($color: $lightThemeAccept, $amount: 15%);
 		border-color: darken($color: $lightThemeAccept, $amount: 15%);
