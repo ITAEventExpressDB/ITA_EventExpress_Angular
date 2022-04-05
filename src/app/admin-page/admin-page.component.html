@@ -1,0 +1,32 @@
+<section class="section-admin">
+  <div class="container">
+    <form #formAdmin="ngForm" (ngSubmit)="onSubmit(formAdmin.value)">
+      <input
+        [(ngModel)]="userIdInput"
+        type="number"
+        placeholder="User ID"
+        name="userID"
+      />
+      <label>
+        <input
+          [(ngModel)]="unblockInput"
+          type="radio"
+          name="blockDecide"
+          value="unblock"
+        />
+        Unblock
+      </label>
+      <label>
+        <input
+          [(ngModel)]="blockInput"
+          type="radio"
+          name="blockDecide"
+          value="block"
+        />
+        Block</label
+      >
+
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+</section>

@@ -9,9 +9,9 @@
         "@schematics/angular:application": {
           "strict": true
         },
-		"@schematics/angular:component": {
-			"styleext": "scss"
-		  }
+        "@schematics/angular:component": {
+          "styleext": "scss"
+        }
       },
       "root": "",
       "sourceRoot": "src",
