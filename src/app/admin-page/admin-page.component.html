@@ -7,24 +7,11 @@
         placeholder="User ID"
         name="userID"
       />
-      <label>
-        <input
-          [(ngModel)]="unblockInput"
-          type="radio"
-          name="blockDecide"
-          value="unblock"
-        />
-        Unblock
-      </label>
-      <label>
-        <input
-          [(ngModel)]="blockInput"
-          type="radio"
-          name="blockDecide"
-          value="block"
-        />
-        Block</label
-      >
+      <label for="blockDecide">Decide</label>
+      <select [(ngModel)]="blockDecide" id="blockDecide" name="blockDecide">
+        <option value="block">Block</option>
+        <option value="unblock">Unblock</option>
+      </select>
 
       <button type="submit">Submit</button>
     </form>

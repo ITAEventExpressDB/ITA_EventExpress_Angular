@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { AdminService } from '../services/admin-form.service';
 
 @Component({
   selector: 'app-admin-page',
@@ -7,13 +7,12 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./admin-page.component.scss'],
 })
 export class AdminPageComponent implements OnInit {
-  constructor(private http: HttpClient) {}
+  constructor(private service: AdminService) {}
 
   ngOnInit(): void {}
 
   userIdInput = '';
-  unblockInput = '';
-  blockInput = '';
+  blockDecide = 'unblock';
 
   onSubmit(data: any) {
     const { userID, blockDecide } = data;
@@ -22,17 +21,20 @@ export class AdminPageComponent implements OnInit {
       return;
     }
 
-    this.http
-      .patch<any>(
-        `http://localhost:3000/api/account/${userID}/${blockDecide}`,
-        {}
-      )
-      .subscribe((data) => {
-        console.log(data);
+    if (blockDecide === 'block') {
+      this.service.blockUser(userID).subscribe(() => {
         this.userIdInput = '';
-        this.unblockInput = '';
-        this.blockInput = '';
-        alert(`Succes ${blockDecide} user.`);
+        this.blockDecide = 'unblock';
+        alert('User blocked.');
+        return;
       });
+    } else {
+      this.service.unblockUser(userID).subscribe(() => {
+        this.userIdInput = '';
+        this.blockDecide = 'unblock';
+        alert('User unblocked.');
+        return;
+      });
+    }
   }
 }

@@ -3,20 +3,22 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ListEventComponent } from './list-event/list-event.component';
-import {UsersFormComponent} from './users-form/users-form.component'
+import { UsersFormComponent } from './users-form/users-form.component';
 import { UnitOfMeasuringsFormComponent } from './unit-of-measurings-form/unit-of-measurings-form.component';
+import { AdminPageComponent } from './admin-page/admin-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: "/landing", pathMatch: "full"},
-  { path: 'landing', component: ListEventComponent},
+  { path: '', redirectTo: '/landing', pathMatch: 'full' },
+  { path: 'landing', component: ListEventComponent },
   { path: 'about', component: AboutUsComponent },
   { path: 'users-form', component: UsersFormComponent },
-  {path: 'unit-of-measurings-form', component: UnitOfMeasuringsFormComponent}
-  ];
+  { path: 'unit-of-measurings-form', component: UnitOfMeasuringsFormComponent },
+  { path: 'admin-form', component: AdminPageComponent },
+];
 
 @NgModule({
   declarations: [],
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
