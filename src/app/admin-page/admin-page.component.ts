@@ -13,26 +13,40 @@ export class AdminPageComponent implements OnInit {
 
   userIdInput = '';
   blockDecide = 'unblock';
+  adminMessage = '';
+  timeout: any;
 
   onSubmit(data: any) {
     const { userID, blockDecide } = data;
     if (!userID || !blockDecide) {
-      alert('You must write userID and block or unblock');
+      clearTimeout(this.timeout);
+      this.adminMessage = 'You must write userID and block or unblock';
+      this.timeout = setTimeout(() => {
+        this.adminMessage = '';
+      }, 3000);
       return;
     }
 
     if (blockDecide === 'block') {
       this.service.blockUser(userID).subscribe(() => {
+        clearTimeout(this.timeout);
         this.userIdInput = '';
         this.blockDecide = 'unblock';
-        alert('User blocked.');
+        this.adminMessage = 'User blocked.';
+        this.timeout = setTimeout(() => {
+          this.adminMessage = '';
+        }, 3000);
         return;
       });
     } else {
       this.service.unblockUser(userID).subscribe(() => {
+        clearTimeout(this.timeout);
         this.userIdInput = '';
         this.blockDecide = 'unblock';
-        alert('User unblocked.');
+        this.adminMessage = 'User unblocked.';
+        this.timeout = setTimeout(() => {
+          this.adminMessage = '';
+        }, 3000);
         return;
       });
     }

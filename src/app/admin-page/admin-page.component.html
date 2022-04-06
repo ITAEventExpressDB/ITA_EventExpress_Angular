@@ -1,19 +1,29 @@
 <section class="section-admin">
   <div class="container">
-    <form #formAdmin="ngForm" (ngSubmit)="onSubmit(formAdmin.value)">
+    <form
+      #formAdmin="ngForm"
+      (ngSubmit)="onSubmit(formAdmin.value)"
+      class="form-admin"
+    >
       <input
         [(ngModel)]="userIdInput"
         type="number"
         placeholder="User ID"
         name="userID"
+        class="form-admin__input"
       />
-      <label for="blockDecide">Decide</label>
-      <select [(ngModel)]="blockDecide" id="blockDecide" name="blockDecide">
-        <option value="block">Block</option>
-        <option value="unblock">Unblock</option>
-      </select>
+      <label for="blockDecide"
+        >Decide
+        <select [(ngModel)]="blockDecide" id="blockDecide" name="blockDecide">
+          <option value="block">Block</option>
+          <option value="unblock">Unblock</option>
+        </select>
+      </label>
 
-      <button type="submit">Submit</button>
+      <button type="submit" class="form-admin__btn">Submit</button>
+      <p class="form-admin__message">
+        {{ adminMessage }}
+      </p>
     </form>
   </div>
 </section>

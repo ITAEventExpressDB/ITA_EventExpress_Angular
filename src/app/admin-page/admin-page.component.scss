@@ -1,2 +1,62 @@
+@import "../../styles/variables";
+
 .section-admin {
+  & .container {
+    width: 500px;
+
+    & p {
+    }
+  }
+}
+
+.form-admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+  background-color: $gray;
+  height: 300px;
+  width: 500px;
+  border-radius: 10px;
+
+  & label {
+    font-size: 16px;
+    margin: 15px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    & select {
+      margin-left: 5px;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.form-admin__input {
+  padding-left: 5px;
+  border: none;
+  border-radius: 5px;
+  height: 20px;
+}
+
+.form-admin__btn {
+  background-color: $lightThemeAccept;
+  color: $white;
+  height: 30px;
+  width: 80px;
+  border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.form-admin__message {
+  margin-top: 20px;
+  font-size: $fontsize-14;
 }
