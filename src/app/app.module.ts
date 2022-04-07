@@ -12,6 +12,7 @@ import { AdminPageComponent } from './admin-page/admin-page.component';
 import { UsersFormComponent } from './users-form/users-form.component';
 import { FormsModule } from '@angular/forms';
 import { UnitOfMeasuringsFormComponent } from './unit-of-measurings-form/unit-of-measurings-form.component';
+import { CategoriesFormComponent } from './categories-form/categories-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +22,7 @@ import { UnitOfMeasuringsFormComponent } from './unit-of-measurings-form/unit-of
     AdminPageComponent,
     UsersFormComponent,
     UnitOfMeasuringsFormComponent,
+    CategoriesFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],

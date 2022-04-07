@@ -1,0 +1,23 @@
+<div class="container">
+	<h2 class="title">Events categories</h2>
+	<ul class="categories__list">
+		<li *ngFor="let category of categories" class="categories__list_item">
+			 {{category.name}}, {{category.categoryGroupId}}
+			 <button (click)="editCategory(category.id)" class="btn-light-theme list__button"> Edit </button>
+			 <button (click)="deleteCategory(category.id)" class="btn-light-theme list__button"> Delete </button>  
+		</li>
+	</ul>
+	<form class="form" #usersForm="ngForm" (ngSubmit)="getCategory(usersForm.value)">
+		<div class="input__container" *ngIf="!editing.val">
+			<input type="text" ngModel name="name" placeholder="Enter category name"/>
+		</div>
+		<input *ngIf="editing.val" type="text" ngModel name="name" placeholder="Enter name"/>
+		<select ngModel name="categoryGroupId">
+			<option value=1>ArtAndCraftGroup</option>
+			<option value=2>EducationAndTraining</option>
+			<option value=3>WellnessHealthAndFitness</option>
+		</select>
+		<button class="form__submit btn-light-theme">{{editing.title}} category</button>
+		<button *ngIf="editing.val" class="form__submit btn-light-theme" (click)="cancel()">Cancel</button>
+	</form>
+</div>
