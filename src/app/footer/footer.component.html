@@ -1,0 +1,35 @@
+
+    <footer class="custom-footer">
+      <div class="custom-footer__logo">
+        <img src="../../assets/icons/LogoViolet.png" alt="Logo" class="logo__image" />
+      </div>
+      <div class="links-to-pages">
+          <a ngFor="let mapperLink  of mapperLinks " [routerLink]="mapperLink.path" class="nav-link link">
+            <i class="link-circle fas fa-circle link-text"></i>
+                          {{mapperLink.name}}
+            </a>
+          </div>
+      <div class="custom-footer__subscribe">
+        <h4>Subscribe us</h4>
+        <form>
+          <input
+            type="email"
+            value="Paste your email"
+            class="custom-footer__subscribe i"
+          />
+          <button type="submit" class="btn-dark-theme">
+            Subscribe
+          </button>
+        </form>
+      </div>
+      <div class="social-links">
+        <h4>Contact us</h4>
+        <p>+(380) 98 56 234</p>
+        <div class="social-links__icons">
+            <a ngFor="let mapperSocialLink  of mapperSocialLinks" [href]="mapperSocialLink.link" class="nav-link social-link">
+              <i class=`{{mapperSocialLink.icon}}`>    
+              </i>
+              </a>  
+              </div>
+      </div>
+    </footer>

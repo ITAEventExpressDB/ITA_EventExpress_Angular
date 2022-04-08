@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { FooterComponent } from './footer/footer.component';
 
 import { AboutUsComponent } from './about-us/about-us.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -17,6 +18,7 @@ import { UnitOfMeasuringsFormComponent } from './unit-of-measurings-form/unit-of
     HeaderComponent,
     AboutUsComponent,
     ListEventComponent,
+    FooterComponent,
     UsersFormComponent,
     UnitOfMeasuringsFormComponent,
   ],
