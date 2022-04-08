@@ -1,0 +1,24 @@
+<!-- <div class="container">
+	<ul class="user__list">
+		<li *ngFor="let user of users" class="user__list_item">
+			name: {{event.name}}, email: {{event.email}}, phone: {{user.phone}} 
+			 <button (click)="editUsername(user.id)" class="btn-light-theme list__button"> Edit </button>
+			 <button (click)="deleteUser(user.id)" class="btn-light-theme list__button"> Delete </button>  
+		</li>
+	</ul>
+	<form class="form" #usersForm="ngForm" (ngSubmit)="getUserFormData(usersForm.value)">
+		<div class="input__container" *ngIf="!editing.val">
+			<input type="text" ngModel name="name" placeholder="Enter name"/>
+			<input type="text" ngModel name="email" placeholder="Enter email"/>
+			<input type="text" ngModel name="phone" placeholder="Enter phone"/>
+			<input type="date" ngModel name="birthday" placeholder="Enter birthday date"/>
+			<select ngModel name="gender">
+				<option value=1>G</option>
+				<option value=0>M</option>
+			</select>
+		</div>
+		<input *ngIf="editing.val" type="text" ngModel name="name" placeholder="Enter name"/>
+		<button class="form__submit btn-light-theme">{{editing.title}} user</button>
+		<button *ngIf="editing.val" class="form__submit btn-light-theme" (click)="cancel()">Cancel</button>
+	</form>
+</div> -->
