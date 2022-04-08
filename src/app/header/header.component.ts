@@ -11,5 +11,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  signIn(): void {
+	  console.log("Wellcome to Events Express");
+  }
 }

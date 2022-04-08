@@ -3,19 +3,24 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ListEventComponent } from './list-event/list-event.component';
-import { UsersFormComponent } from './users-form/users-form.component';
+import { EventMatrixComponent } from './event-matrix/event-matrix.component';
+import {UsersFormComponent} from './users-form/users-form.component';
 import { UnitOfMeasuringsFormComponent } from './unit-of-measurings-form/unit-of-measurings-form.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 // import { EventsFormComponent } from './events-form/events-form.component';
+import { CategoriesFormComponent } from './categories-form/categories-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
   { path: 'landing', component: ListEventComponent },
   { path: 'about', component: AboutUsComponent },
+  { path: 'event-matrix', component: EventMatrixComponent},
   { path: 'users-form', component: UsersFormComponent },
   { path: 'unit-of-measurings-form', component: UnitOfMeasuringsFormComponent },
   { path: 'admin-form', component: AdminPageComponent },
   // { path: "events-form", component: EventsFormComponent }
+  { path: 'categories-form', component: CategoriesFormComponent },
+
 ];
 
 @NgModule({
