@@ -13,6 +13,7 @@ import { UsersFormComponent } from './users-form/users-form.component';
 import { FormsModule } from '@angular/forms';
 import { UnitOfMeasuringsFormComponent } from './unit-of-measurings-form/unit-of-measurings-form.component';
 import { CategoriesFormComponent } from './categories-form/categories-form.component';
+import { EventMatrixComponent } from './event-matrix/event-matrix.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,7 @@ import { CategoriesFormComponent } from './categories-form/categories-form.compo
     UsersFormComponent,
     UnitOfMeasuringsFormComponent,
     CategoriesFormComponent,
+    EventMatrixComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
