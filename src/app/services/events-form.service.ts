@@ -1,25 +1,30 @@
-// import { HttpClient } from '@angular/common/http';
-// import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { Injectable } from '@angular/core';
 
-// @Injectable({
-//   providedIn: 'root'
-// })
-// export class EventsFormService {
-//   url = 'http://localhost:3000/api/events';
-//   constructor(private http: HttpClient) { }
+@Injectable({
+  providedIn: 'root'
+})
+export class EventsFormService {
+  url = 'http://localhost:3000/api/events';
+  constructor(private http: HttpClient) { }
 
-//   getEvent() {
-//     return this.http.get(`${this.url}`);
-//   }
-//   addEvent(data: any) {
-//       return this.http.post(`${this.url}/events`, data);
-//     }
+  getData() {
+    return this.http.get(`${this.url}`);
+  }
+
+  getEvent(id: string, data: any) {
+    return this.http.get(`${this.url}/${id}`);
+  }
+
+  addEvent(data: any) {
+      return this.http.post(`${this.url}`, data);
+    }
   
-//     editEvent(id: string, data: any) {
-//       return this.http.patch(`${this.url}/events/${id}`, data);
-//     }
+    editEvent(id: string, data: any) {
+      return this.http.patch(`${this.url}/${id}`, data);
+    }
   
-//     deleteEvent(id: string) {
-//       return this.http.delete(`${this.url}/events/${id}`);
-//   }
-// }
+    deleteEvent(id: string) {
+      return this.http.delete(`${this.url}/${id}/`);
+  }
+}

@@ -1,54 +1,55 @@
 
-// import { Component, OnInit } from '@angular/core';
-// import { EventsFormService } from '../services/events-form.service';
+import { Component, OnInit } from '@angular/core';
+import { EventsFormService } from '../services/events-form.service';
 
-// @Component({
-//   selector: 'app-events-form',
-//   templateUrl: './events-form.component.html',
-//   styleUrls: ['./events-form.component.scss',
-//   '../../styles/styles.scss',]
-// })
-// export class EventsFormComponent implements OnInit {
-//   title = 'Add';
-//   users: any;
-//   router = 'events';
-//   editing = { val: false, title: 'Add', id: '' };
+@Component({
+  selector: 'app-events-form',
+  templateUrl: './events-form.component.html',
+  styleUrls: ['./events-form.component.scss',
+  '../../styles/styles.scss',]
+})
+export class EventsFormComponent implements OnInit {
+  title = 'Add';
+  events: any;
+  router = 'events';
+  editing = { val: false, title: 'Add', id: '' };
 
-//   constructor(private event: EventsFormService) {
-//     this.();
-//   }
+  constructor(private event: EventsFormService) {
+    this.getEvents();
+  }
 
-//   cancel() {
-//     this.editing = { val: false, title: 'Add', id: '' };
-//   }
+  cancel() {
+    this.editing = { val: false, title: 'Add', id: '' };
+  }
 
-//   getUsers() {
-//     this.event.getData().subscribe((data) => {
-//       this.users = data;
-//     });
-//   }
+  getEvents() {
+    this.event.getData().subscribe((data) => {
+      this.events = data;
+      console.log(this.events);
+    });
+  }
 
-//   getUserFormData(data: any) {
-//     (this.editing.val
-//       ? this.event.editEvent(this.editing.id, data)
-//       : this.event.addEvent(data)
-//     ).subscribe(() => {
-//       this.getEvents();
-//       this.cancel();
-//     });
-//   }
+  getEventsFormData(data: any) {
+    (this.editing.val
+      ? this.event.editEvent(this.editing.id, data)
+      : this.event.addEvent(data)
+    ).subscribe(() => {
+      this.getEvents();
+      this.cancel();
+    });
+  }
 
-//   deleteEvent(id: string) {
-//     this.event.deleteEvent(id).subscribe(() => {
-//       this.getEvents();
-//     });
-//   }
+  deleteEvent(id: string) {
+    this.event.deleteEvent(id).subscribe(() => {
+      this.getEvents();
+    });
+  }
 
-//   editEventname(id: string) {
-//     this.editing = { val: true, title: 'Edit', id };
-//   }
+  editEvent(id: string) {
+    this.editing = { val: true, title: 'Edit', id };
+  }
 
-//   ngOnInit(): void {
-//   }
+  ngOnInit(): void {
+  }
 
-// }
+}
