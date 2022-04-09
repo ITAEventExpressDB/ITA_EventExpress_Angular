@@ -1,0 +1,12 @@
+<button igxButton="raised" 
+class="header__menu"
+        style="background: url(../../assets/icons/Menu.png)" 
+        [igxToggleAction]="dropdown"
+        [igxDropDownItemNavigation]="dropdown">
+      
+</button>
+<igx-drop-down #dropdown>
+    <igx-drop-down-item *ngFor="let item of items">
+        {{ item.field }}
+    </igx-drop-down-item>
+</igx-drop-down>
