@@ -16,7 +16,7 @@ const routes: Routes = [
   { path: 'about', component: AboutUsComponent },
   { path: 'event-matrix', component: EventMatrixComponent},
   { path: 'users-form', component: UsersFormComponent },
-  { path: 'unit-of-measurings-form', component: UnitOfMeasuringsFormComponent },
+  { path: 'users-form', component: UnitOfMeasuringsFormComponent },
   { path: 'admin-form', component: AdminPageComponent },
   { path: 'categories-form', component: CategoriesFormComponent },
 ];

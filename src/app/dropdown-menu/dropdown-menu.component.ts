@@ -6,10 +6,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./dropdown-menu.component.scss']
 })
 export class DropdownMenuComponent implements OnInit {
-  public items: Array<{ field: string }> = [
-    { field: 'Option 1' },
-    { field: 'Option 2' },
-    { field: 'Option 3' }
+  public items: Array<{ field: string} > = [
+    { field: 'About Us' },
+    { field: 'users-form' },
+    { field: 'users-form' },
+    { field: 'admin-form' },
+    { field: 'categories-form' }
 ];
   constructor() { }
 
