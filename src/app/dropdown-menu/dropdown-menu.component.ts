@@ -11,7 +11,8 @@ export class DropdownMenuComponent implements OnInit {
     { field: 'users-form', path: '/users-form' },
     { field: 'unit-of-measurings-form', path: '/unit-of-measurings-form' },
     { field: 'admin-form', path: '/admin-form' },
-    { field: 'categories-form', path: '/categories-form' }
+    { field: 'categories-form', path: '/categories-form' },
+    { field: 'contact-admin-form', path: '/contact-admin-form' }
 ];
   constructor() { }
 
