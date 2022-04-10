@@ -6,6 +6,9 @@ import { ListEventComponent } from './list-event/list-event.component';
 import { EventMatrixComponent } from './event-matrix/event-matrix.component';
 import {UsersFormComponent} from './users-form/users-form.component';
 import { UnitOfMeasuringsFormComponent } from './unit-of-measurings-form/unit-of-measurings-form.component';
+import { SearchEventComponent } from './search-event/search-event.component';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { EventsFormComponent } from './events-form/events-form.component';
 import { CategoriesFormComponent } from './categories-form/categories-form.component';
@@ -18,6 +21,10 @@ const routes: Routes = [
   { path: 'event-matrix', component: EventMatrixComponent},
   { path: 'users-form', component: UsersFormComponent },
   { path: 'contact-admin-form', component: ContactAdminFormComponent },
+  { path: 'unit-of-measurings-form', component: UnitOfMeasuringsFormComponent},
+  { path: 'search-event', component: SearchEventComponent},
+  { path: 'create-event', component: CreateEventComponent},
+  { path: 'terms', component: TermsOfUseComponent},
   { path: 'unit-of-measurings-form', component: UnitOfMeasuringsFormComponent },
   { path: 'admin-form', component: AdminPageComponent },
   { path: "events-form", component: EventsFormComponent },
