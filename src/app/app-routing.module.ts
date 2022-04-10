@@ -7,9 +7,9 @@ import { EventMatrixComponent } from './event-matrix/event-matrix.component';
 import {UsersFormComponent} from './users-form/users-form.component';
 import { UnitOfMeasuringsFormComponent } from './unit-of-measurings-form/unit-of-measurings-form.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
+import { EventsFormComponent } from './events-form/events-form.component';
 import { CategoriesFormComponent } from './categories-form/categories-form.component';
 import { ContactAdminFormComponent } from './contact-admin-form/contact-admin-form.component';
-
 
 const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
@@ -20,6 +20,7 @@ const routes: Routes = [
   { path: 'contact-admin-form', component: ContactAdminFormComponent },
   { path: 'unit-of-measurings-form', component: UnitOfMeasuringsFormComponent },
   { path: 'admin-form', component: AdminPageComponent },
+  { path: "events-form", component: EventsFormComponent },
   { path: 'categories-form', component: CategoriesFormComponent },
 ];
 
