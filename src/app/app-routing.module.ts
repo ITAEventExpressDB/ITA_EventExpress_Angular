@@ -8,6 +8,7 @@ import {UsersFormComponent} from './users-form/users-form.component';
 import { UnitOfMeasuringsFormComponent } from './unit-of-measurings-form/unit-of-measurings-form.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { CategoriesFormComponent } from './categories-form/categories-form.component';
+import { ContactAdminFormComponent } from './contact-admin-form/contact-admin-form.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'about', component: AboutUsComponent },
   { path: 'event-matrix', component: EventMatrixComponent},
   { path: 'users-form', component: UsersFormComponent },
+  { path: 'contact-admin-form', component: ContactAdminFormComponent },
   { path: 'unit-of-measurings-form', component: UnitOfMeasuringsFormComponent },
   { path: 'admin-form', component: AdminPageComponent },
   { path: 'categories-form', component: CategoriesFormComponent },

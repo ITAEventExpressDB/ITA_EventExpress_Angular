@@ -14,6 +14,7 @@ import { FormsModule } from '@angular/forms';
 import { UnitOfMeasuringsFormComponent } from './unit-of-measurings-form/unit-of-measurings-form.component';
 import { CategoriesFormComponent } from './categories-form/categories-form.component';
 import { EventMatrixComponent } from './event-matrix/event-matrix.component';
+import { ContactAdminFormComponent } from './contact-admin-form/contact-admin-form.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,6 +26,7 @@ import { EventMatrixComponent } from './event-matrix/event-matrix.component';
     UnitOfMeasuringsFormComponent,
     CategoriesFormComponent,
     EventMatrixComponent,
+    ContactAdminFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
