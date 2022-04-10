@@ -15,6 +15,9 @@ import { UnitOfMeasuringsFormComponent } from './unit-of-measurings-form/unit-of
 import { CategoriesFormComponent } from './categories-form/categories-form.component';
 import { EventMatrixComponent } from './event-matrix/event-matrix.component';
 import { ContactAdminFormComponent } from './contact-admin-form/contact-admin-form.component';
+import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
+import { IgxDropDownModule, IgxButtonModule, IgxToggleModule } from 'igniteui-angular';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,9 +30,19 @@ import { ContactAdminFormComponent } from './contact-admin-form/contact-admin-fo
     CategoriesFormComponent,
     EventMatrixComponent,
     ContactAdminFormComponent,
+    DropdownMenuComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    IgxDropDownModule,
+    IgxButtonModule,
+    IgxToggleModule,
+    BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [],
+  schemas: []
 })
-export class AppModule {}
+export class AppModule { }
