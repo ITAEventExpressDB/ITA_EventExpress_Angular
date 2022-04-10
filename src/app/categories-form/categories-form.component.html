@@ -17,7 +17,9 @@
 			<option value=2>EducationAndTraining</option>
 			<option value=3>WellnessHealthAndFitness</option>
 		</select>
+		<div>
 		<button class="form__submit btn-light-theme">{{editing.title}} category</button>
 		<button *ngIf="editing.val" class="form__submit btn-light-theme" (click)="cancel()">Cancel</button>
+	    </div>
 	</form>
 </div>
