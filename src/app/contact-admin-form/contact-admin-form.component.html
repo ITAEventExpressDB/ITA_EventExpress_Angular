@@ -1,0 +1,108 @@
+<div class="container">
+  <!-- change to mine -->
+  <ul class="admin__list">
+    <li *ngFor="let admin of admins" class="admin__list_item">
+      senderId: {{ admin.senderId }}, messageId: {{ admin.messageId }}, title:
+      {{ admin.title }}, status: {{ admin.status }}, email: {{ admin.email }},
+      <button
+        (click)="editAdminStatus(admin.messageId)"
+        class="btn-light-theme list__button"
+      >
+        Edit
+      </button>
+      <button
+        (click)="deleteAdmin(admin.id)"
+        class="btn-light-theme list__button"
+      >
+        Delete
+      </button>
+    </li>
+  </ul>
+  <form
+    class="form"
+    #contactAdminForm="ngForm"
+    (ngSubmit)="getAdminFormData(contactAdminForm.value)"
+  >
+    <div class="input__container" *ngIf="!editing.val">
+      <input
+        type="text"
+        ngModel
+        name="senderId"
+        #senderId="ngModel"
+        placeholder="Enter senderId"
+      />
+      <input
+        type="text"
+        ngModel
+        name="asigneeId"
+        #asigneeId="ngModel"
+        placeholder="Enter asigneeId"
+      />
+      <input
+        type="text"
+        required
+        minlength="5"
+        maxlength="20"
+        pattern="johnrmstrong@gmail.com"
+        ngModel
+        name="email"
+        #email="ngModel"
+        placeholder="Enter email"
+      />
+      <input type="text" ngModel name="messageId" placeholder="Enter message id" />
+      <input type="text" ngModel name="subject" placeholder="Enter subject" />
+      <input
+        required
+        minlength="10"
+        maxlength="255"
+        pattern="Thank u for the platform"
+        type="text"
+        ngModel
+        name="title"
+        placeholder="Enter title"
+      />
+      <input
+        type="text"
+        ngModel
+        name="emailBody"
+        placeholder="Enter emailBody"
+      />
+      <input
+        type="text"
+        ngModel
+        name="resolutionDetails"
+        placeholder="Enter resolutionDetails"
+      />
+      <input
+        type="date"
+        ngModel
+        name="dateCreated"
+        placeholder="Enter dateCreated"
+      />
+      <input
+        type="date"
+        ngModel
+        name="dateUpdated"
+        placeholder="Enter dateUpdated"
+      />
+      <input type="text" ngModel name="status" placeholder="Enter status" />
+    </div>
+    <input
+      *ngIf="editing.val"
+      type="text"
+      ngModel
+      name="status"
+      placeholder="Enter status"
+    />
+    <button class="form__submit btn-light-theme">
+      {{ editing.title }} admin
+    </button>
+    <button
+      *ngIf="editing.val"
+      class="form__submit btn-light-theme"
+      (click)="cancel()"
+    >
+      Cancel
+    </button>
+  </form>
+</div>

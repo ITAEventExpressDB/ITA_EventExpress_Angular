@@ -12,6 +12,7 @@ import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
 import { AdminPageComponent } from './admin-page/admin-page.component';
 import { EventsFormComponent } from './events-form/events-form.component';
 import { CategoriesFormComponent } from './categories-form/categories-form.component';
+import { ContactAdminFormComponent } from './contact-admin-form/contact-admin-form.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/landing', pathMatch: 'full' },
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'about', component: AboutUsComponent },
   { path: 'event-matrix', component: EventMatrixComponent},
   { path: 'users-form', component: UsersFormComponent },
+  { path: 'contact-admin-form', component: ContactAdminFormComponent },
   { path: 'unit-of-measurings-form', component: UnitOfMeasuringsFormComponent},
   { path: 'search-event', component: SearchEventComponent},
   { path: 'create-event', component: CreateEventComponent},
