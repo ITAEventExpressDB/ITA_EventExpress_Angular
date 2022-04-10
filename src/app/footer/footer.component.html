@@ -1,0 +1,36 @@
+<footer class="custom-footer">
+  <div class="custom-footer__logo">
+    <img
+      src="../../assets/icons/LogoViolet.png"
+      alt="Logo"
+      class="logo__image"
+    />
+  </div>
+  <div class="links-to-pages">
+    <a *ngFor="let link of links" [routerLink]="link.path" class="nav-link link">
+      {{link.name}}
+    </a>
+  </div>
+  <div class="custom-footer__subscribe">
+    <h4>Subscribe us</h4>
+    <form>
+      <input
+        type="email"
+        placeholder="Paste your email"
+        class="custom-footer__subscribe i"
+      />
+      <button type="submit" class="btn-dark-theme">
+        <i class="fa-solid fa-paper-plane fa-lg"></i>
+      </button>
+    </form>
+  </div>
+  <div class="social-links">
+    <h4>Contact us</h4>
+    <a href="tel:+3809856234">+38(098)-562-34</a>
+    <div class="social-links__icons">
+      <a *ngFor="let i of socialLinks" [href]="i.link" target="blank" class="nav-link social-link">
+            <i [class]="i.icon"></i>
+      </a>  
+    </div>
+  </div>
+</footer>
