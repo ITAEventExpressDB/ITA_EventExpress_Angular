@@ -1,0 +1,27 @@
+<div class="container">
+	<ul class="events__list">
+		<li *ngFor="let event of events" class="events__list_item">
+			title: {{event.title}}, description: {{event.description}}, dateFrom: {{event.dateFrom}} 
+			 <button (click)="editEvent(event.id)" class="btn-light-theme list__button"> Edit </button>
+			 <button (click)="deleteEvent(event.id)" class="btn-light-theme list__button"> Delete </button>  
+		</li>
+	</ul>
+	<form class="form" #eventsForm="ngForm" (ngSubmit)="getEventsFormData(eventsForm.value)">
+		<div class="input__container" *ngIf="!editing.val">
+			<input type="text" ngModel name="title" placeholder="Enter title"/>
+			<input type="text" ngModel name="description" placeholder="Enter description"/>
+			<input type="date" ngModel name="dateFrom" placeholder="Enter start date"/>
+			<input type="date" ngModel name="dateTo" placeholder="Enter end date"/>
+			<input type="text" ngModel name="maxParticipants" placeholder="Enter maximum number of participants"/>
+			<select ngModel name="isPublic" >
+				<option value=true>Public</option>
+				<option value=false>Online</option>
+			</select>
+			<input type="text" ngModel name="eventLocationId" placeholder="Enter event location Id"/>
+			<input type="text" ngModel name="eventAudienceId" placeholder="Enter event audience Id"/>
+		</div>
+		<input *ngIf="editing.val" type="text" ngModel name="title" placeholder="Enter title"/>
+		<button class="form__submit btn-light-theme">{{editing.title}} event</button>
+		<button *ngIf="editing.val" class="form__submit btn-light-theme" (click)="cancel()">Cancel</button>
+	</form>
+</div>

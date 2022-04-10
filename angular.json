@@ -31,11 +31,11 @@
             ],
             "styles": [
               "src/styles/styles.scss",
-                "node_modules/@fortawesome/fontawesome-free/css/all.css"
-             ],
-             "scripts": [
-               "node_modules/@fortawesome/fontawesome-free/js/all.js"
-             ]
+           "node_modules/@fortawesome/fontawesome-free/css/all.css",
+           ],
+      "scripts": [
+          "node_modules/@fortawesome/fontawesome-free/js/all.js"
+        ]
           },
           "configurations": {
             "production": {

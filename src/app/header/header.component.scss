@@ -1,5 +1,7 @@
+@import '../../styles/variables';
+
 .header {
-    background: rgb(20, 1, 1);
+    background: $transparentBlackBackground;
     height: 60px;
     width: 100%;
     text-align: center;
@@ -12,43 +14,50 @@
     padding: 2px 5px;
     }
   
-  .header__menu {
-    width: 54px;
-    height: 47px;
-    margin: 12px, 0px, 0px, 8px;
+ .logo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: $fontsize-24;
     cursor: pointer;
-    }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, 0%);
-      font-size: 24px;
-    
-      &:active,
-      &:focus,
-      &:hover {
-        text-decoration: none;
+      .logo__textEvents {
+        color: $lightThemeAccept;
+        text-shadow: 0 0 3px $lightThemeHeader, 0 0 2px $white;
+        font-size: $fontsize-24;
+        font-weight: $bold;
       }
     
-      &__textEvents {
-        color: violet;
-        text-shadow: 0 0 3px gray, 0 0 2px white;
-        font-size: 24px;
-        font-weight: bold;
+      .logo__textExpress {
+        color: $white;
+        text-shadow: 0 0 3px $lightThemeAccept , 0 0 5px $white;
+        font-size: $fontsize-24;
+        font-weight: $bold;
       }
     
-      &__textExpress {
-        color: white;
-        text-shadow: 0 0 3px gray , 0 0 5px violet;
-        font-size: 24px;
-        font-weight: bold;
-      }
-    
-      &__image {
+      .logo__image {
         height: 25px;
       }
     }
+
+    .header__right-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: $transparentGreyBackground;
+      margin-right: 0px;
+      margin-left: auto;
+      border-radius: $buttonBorderRadius;
+      padding: 2px 4px;
+    }
+
+    .btn-light-theme{
+      padding: 5px 10px;
+      font-size: $fontsize-14;
+      margin-right: 0px;
+      margin-left: auto;
+
+   }
    

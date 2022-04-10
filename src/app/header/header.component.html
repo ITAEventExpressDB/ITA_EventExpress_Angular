@@ -1,9 +1,27 @@
 <div class="header">
-    <div class="logo">
+  <button
+			class="header__menu"
+			type="button"
+      style="background: url(../../assets/icons/Menu.png)"      
+		>			
+		</button>
+         <div onclick="location.href='/landing'" class="logo">
+  <app-dropdown-menu></app-dropdown-menu>
+    <div onclick="location.href='/landing'" class="logo">
         <img src="../../assets/icons/LogoViolet.png" alt="Logo" class="logo__image" />
         <div class="logo__text">
           <span class="logo__textEvents"> EVENTS</span>
           <span class="logo__textExpress">EXPRESS</span>
         </div>
-    
       </div>
+    <div class="header__right-block">
+        <button
+			class="btn-light-theme"
+			(click)="signIn()"
+			type="button"
+		>
+			SignIn / SingUp
+		</button>
+
+  </div>
+</div>
