@@ -1,8 +1,10 @@
-<div class="event-matrix">
+<div class="container">
+  <div class="event-matrix">
     <div *ngFor="let event of mapper" class="event-card">
             <img [src]="event.eventImagePath" class="event-card__poster" alt="Poster" />
             <div class="event-card__inner-container">
               <p class="event-card__inner-text">{{event.title}}</p>
             </div>
     </div>
+</div>
 </div>

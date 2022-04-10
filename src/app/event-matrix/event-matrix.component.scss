@@ -1,4 +1,8 @@
 @import '../../styles/variables';
+.container {
+  display: flex;
+  justify-content: center;
+}
 .event-matrix {
     display: flex;
     max-width: 1168px;
