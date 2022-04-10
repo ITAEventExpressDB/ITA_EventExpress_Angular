@@ -9,9 +9,9 @@
         "@schematics/angular:application": {
           "strict": true
         },
-		"@schematics/angular:component": {
-			"style": "scss"
-		  }
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
       },
       "root": "",
       "sourceRoot": "src",
@@ -31,11 +31,12 @@
             ],
             "styles": [
               "src/styles/styles.scss",
-           "node_modules/@fortawesome/fontawesome-free/css/all.css"
-           ],
-      "scripts": [
-          "node_modules/@fortawesome/fontawesome-free/js/all.js"
-        ]
+              "node_modules/igniteui-angular/styles/igniteui-angular.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
+            ],
+            "scripts": [ "./node_modules/hammerjs/hammer.min.js",
+              "node_modules/@fortawesome/fontawesome-free/js/all.js"
+            ]
           },
           "configurations": {
             "production": {
@@ -100,9 +101,10 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles/styles.scss"
+              "src/styles/styles.scss",
+              "node_modules/igniteui-angular/styles/igniteui-angular.css"
             ],
-            "scripts": []
+            "scripts": [ "./node_modules/hammerjs/hammer.min.js"]
           }
         }
       }
