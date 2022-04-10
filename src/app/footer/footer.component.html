@@ -26,8 +26,8 @@
         <h4>Contact us</h4>
         <p>+(380) 98 56 234</p>
         <div class="social-links__icons">
-            <a ngFor="let mapperSocialLink  of mapperSocialLinks" [href]="mapperSocialLink.link" class="nav-link social-link">
-              <i class=`{{mapperSocialLink.icon}}`>    
+            <a ngFor="let mapperSocialLink  of mapperSocialLinks" [routerLink]="[mapperSocialLink.link]" class="nav-link social-link">
+              <i [class]="mapperSocialLink.icon">    
               </i>
               </a>  
               </div>
