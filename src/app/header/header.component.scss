@@ -14,24 +14,15 @@
     padding: 2px 5px;
     }
   
-  .header__menu {
-    width: 54px;
-    height: 47px;
-    margin: 12px, 0px, 0px, 8px;
+ .logo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: $fontsize-24;
     cursor: pointer;
-    }
 
-    .logo {
-      display: flex;
-      align-items: center;
-      position: absolute;
-      left: 50%;
-      transform: translate(-50%, 0%);
-      font-size: $fontsize-24;
-      cursor: pointer;
-    
-      
-    
       .logo__textEvents {
         color: $lightThemeAccept;
         text-shadow: 0 0 3px $lightThemeHeader, 0 0 2px $white;
@@ -50,9 +41,9 @@
         height: 25px;
       }
     }
+
     .header__right-block {
       display: flex;
-     
       align-items: center;
       justify-content: center;
       background: $transparentGreyBackground;
@@ -61,13 +52,12 @@
       border-radius: $buttonBorderRadius;
       padding: 2px 4px;
     }
- 
 
     .btn-light-theme{
       padding: 5px 10px;
       font-size: $fontsize-14;
       margin-right: 0px;
       margin-left: auto;
-      
-    }
+
+   }
    

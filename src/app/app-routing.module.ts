@@ -20,7 +20,6 @@ const routes: Routes = [
   { path: 'admin-form', component: AdminPageComponent },
   { path: "events-form", component: EventsFormComponent },
   { path: 'categories-form', component: CategoriesFormComponent },
-
 ];
 
 @NgModule({

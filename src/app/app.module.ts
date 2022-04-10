@@ -1,10 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-
 import { AboutUsComponent } from './about-us/about-us.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ListEventComponent } from './list-event/list-event.component';
@@ -15,6 +13,9 @@ import { UnitOfMeasuringsFormComponent } from './unit-of-measurings-form/unit-of
 import { EventsFormComponent } from './events-form/events-form.component';
 import { CategoriesFormComponent } from './categories-form/categories-form.component';
 import { EventMatrixComponent } from './event-matrix/event-matrix.component';
+import { DropdownMenuComponent } from './dropdown-menu/dropdown-menu.component';
+import { IgxDropDownModule, IgxButtonModule, IgxToggleModule } from 'igniteui-angular';
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -26,11 +27,21 @@ import { EventMatrixComponent } from './event-matrix/event-matrix.component';
     UsersFormComponent,
     UnitOfMeasuringsFormComponent,
     EventsFormComponent,
-    CategoriesFormComponent,
     EventMatrixComponent,
+    CategoriesFormComponent,
+    DropdownMenuComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  imports: [BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    IgxDropDownModule,
+    IgxButtonModule,
+    IgxToggleModule,
+    BrowserAnimationsModule],
   providers: [],
   bootstrap: [AppComponent],
+  entryComponents: [],
+  schemas: []
 })
-export class AppModule {}
+export class AppModule { }
