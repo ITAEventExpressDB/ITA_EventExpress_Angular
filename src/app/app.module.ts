@@ -12,6 +12,10 @@ import { ListEventComponent } from './list-event/list-event.component';
 import { UsersFormComponent } from './users-form/users-form.component';
 import { FormsModule } from '@angular/forms';
 import { UnitOfMeasuringsFormComponent } from './unit-of-measurings-form/unit-of-measurings-form.component';
+import { CreateEventComponent } from './create-event/create-event.component';
+import { TermsOfUseComponent } from './terms-of-use/terms-of-use.component';
+import { SearchEventComponent } from './search-event/search-event.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +25,9 @@ import { UnitOfMeasuringsFormComponent } from './unit-of-measurings-form/unit-of
     FooterComponent,
     UsersFormComponent,
     UnitOfMeasuringsFormComponent,
+    CreateEventComponent,
+    TermsOfUseComponent,
+    SearchEventComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
