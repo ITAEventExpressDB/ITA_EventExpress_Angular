@@ -13,7 +13,8 @@ export class DropdownMenuComponent implements OnInit {
     { field: 'admin-form', path: '/admin-form' },
     { field: 'categories-form', path: '/categories-form' },
     { field: 'contact-admin-form', path: '/contact-admin-form' },
-    { field: 'events-form', path: '/events-form' }
+    { field: 'events-form', path: '/events-form' },
+    { field: 'event-matrix', path: '/events-matrix'}
 ];
   constructor() { }
 
